@@ -1,0 +1,93 @@
+{
+	"requirements": [
+	{
+		"description": "1 - Deve Salvar um Documento.",
+		"bonus": false
+	},
+	{
+		"description": "2 - Deve Realizar Listagem de Documento.",
+		"bonus": false
+	},
+	{
+		"description" : "3 - Deve Editar um Documento.",
+		"bonus": false
+	},
+	{
+		"description" : "4 - Deve Deletar um Documento.",
+		"bonus": false
+	},
+	{
+		"description" : "5 - Deve Salvar um Jogador.",
+		"bonus": false
+	},
+	{
+		"description" : "6 - Deve Salvar um Jogador com um Time.",
+		"bonus": false
+	},
+	{
+		"description" : "7 - Deve Salvar um Jogador com um Documento.",
+		"bonus": false
+	},
+	{
+		"description" : "8 - Deve Listar Jogadores.",
+		"bonus": false
+	},
+	{
+		"description" : "9 - Deve editar um Jogador.",
+		"bonus": false
+	},
+	{
+		"description" : "10 - Deve Excluir um jogador.",
+		"bonus": false
+	},
+	{
+		"description" : "11 - Deve Salvar um Time.",
+		"bonus": false
+	},
+	{
+		"description" : "12 - Deve Salvar um Time com Jogadores.",
+		"bonus": false
+	},
+	{
+		"description" : "13 - Deve Salvar um Time com Torcedores.",
+		"bonus": false
+	},
+	{
+		"description" : "14 - Deve Listar Times.",
+		"bonus": false
+	},
+	{
+		"description" : "15 - Deve Listar Time com Jogadores.",
+		"bonus": false
+	},
+	{
+		"description" : "16 - Deve Listar Time com Torcedores.",
+		"bonus": false
+	},
+	{
+		"description" : "17 - Deve Editar Time.",
+		"bonus": false
+	},
+	{
+		"description" : "18 - Deve Deletar Time",
+		"bonus": false
+	},
+	{
+		"description": "19 - Deve Salvar um Torcedor.",
+		"bonus": false
+	},
+	{
+		"description": "20 - Deve Listar um Torcedor.",
+		"bonus": false
+	},
+	{
+		"description" : "21 - Deve Editar um Torcedor.",
+		"bonus": false
+	},
+	{
+		"description" : "22 - Deve Excluir um Torcedor.",
+		"bonus": false
+	}
+
+	]
+}
