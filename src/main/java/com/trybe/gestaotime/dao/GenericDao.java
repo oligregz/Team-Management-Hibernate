@@ -11,7 +11,7 @@ import javax.persistence.Persistence;
 
 public abstract class GenericDao<T, I extends Serializable> {
 
-  EntityManagerFactory emf = Persistence.createEntityManagerFactory("crudHibernatePU");
+  static EntityManagerFactory emf = Persistence.createEntityManagerFactory("crudHibernatePU");
   
   abstract void save(T s);
 
