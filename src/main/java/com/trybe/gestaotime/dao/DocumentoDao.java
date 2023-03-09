@@ -19,8 +19,11 @@ public class DocumentoDao extends GenericDao<Documento, Integer> {
 
   @Override
   void update(Documento s) {
-    // TODO Auto-generated method stub
-    
+    EntityManager em = GenericDao.emf.createEntityManager();
+    em.getTransaction().begin();
+    em.merge(s);
+    em.getTransaction().commit();
+    em.close();
   }
 
   @Override
