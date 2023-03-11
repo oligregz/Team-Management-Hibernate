@@ -21,7 +21,7 @@ public class Jogador {
 
   private String nome;
   private String posicao;
-  private String time;
+  private Time time;
 
   @JoinColumn(name = "documento_id")
   @OneToOne(fetch = FetchType.LAZY)
@@ -51,11 +51,11 @@ public class Jogador {
     this.documento = documento;
   }
 
-  public String getTime() {
+  public Time getTime() {
     return time;
   }
 
-  public void setTime(String time) {
+  public void setTime(Time time) {
     this.time = time;
   }
 
