@@ -1,6 +1,5 @@
 package com.trybe.gestaotime.model;
 
-import javax.annotation.processing.Generated;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
