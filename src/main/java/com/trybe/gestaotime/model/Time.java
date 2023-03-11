@@ -3,6 +3,9 @@ package com.trybe.gestaotime.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
+import javax.persistence.OneToMany;
+
 /**
  * Classe Time.
  **/
@@ -12,7 +15,10 @@ public class Time {
   private Long id;
 
   private String nome;
+
+  @OneToMany(mappedBy = "time", cascade = CascadeType.ALL, orphanRemoval = true)
   private List<Jogador> jogadores;
+
   private List<Torcedor> torcedores;
 
   public Time() {

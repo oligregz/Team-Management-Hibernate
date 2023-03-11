@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -21,6 +22,9 @@ public class Jogador {
 
   private String nome;
   private String posicao;
+
+  @ManyToOne
+  @JoinColumn(name = "time_id")
   private Time time;
 
   @JoinColumn(name = "documento_id")
