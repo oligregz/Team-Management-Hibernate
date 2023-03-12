@@ -1,8 +1,8 @@
 package com.trybe.gestaotime.dao;
 
-import java.util.List;
-
 import com.trybe.gestaotime.model.Time;
+
+import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
