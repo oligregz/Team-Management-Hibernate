@@ -45,7 +45,7 @@ public class TimeDao extends GenericDao<Time, Integer> {
   }
 
   @Override
-  public void update(Time s) {
+  public void editar(Time s) {
     EntityManager em = GenericDao.emf.createEntityManager();
     em.getTransaction().begin();
     em.merge(s);

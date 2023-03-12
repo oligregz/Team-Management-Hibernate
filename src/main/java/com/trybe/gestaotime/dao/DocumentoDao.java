@@ -46,7 +46,7 @@ public class DocumentoDao extends GenericDao<Documento, Integer> {
   }
 
   @Override
-  public void update(Documento s) {
+  public void editar(Documento s) {
     EntityManager em = GenericDao.emf.createEntityManager();
     em.getTransaction().begin();
     em.merge(s);

@@ -46,7 +46,7 @@ public class JogadorDao extends GenericDao<Jogador, Integer> {
   }
 
   @Override
-  public void update(Jogador s) {
+  public void editar(Jogador s) {
     EntityManager em = GenericDao.emf.createEntityManager();
     em.getTransaction().begin();
     em.merge(s);

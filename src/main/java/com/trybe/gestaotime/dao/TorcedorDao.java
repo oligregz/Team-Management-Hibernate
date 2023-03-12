@@ -46,7 +46,7 @@ public class TorcedorDao extends GenericDao<Torcedor, Integer> {
   }
 
   @Override
-  public void update(Torcedor s) {
+  public void editar(Torcedor s) {
     EntityManager em = GenericDao.emf.createEntityManager();
     em.getTransaction().begin();
     em.merge(s);
