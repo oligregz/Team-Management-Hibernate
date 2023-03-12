@@ -23,8 +23,17 @@ public class Documento {
       fetch = FetchType.LAZY)
   private Jogador jogador;
 
-  private int cpf;
-  private int numeroCarteiraTrabalho;
+  private String cpf;
+  private String numeroCarteiraTrabalho;
+  private String numeroCbf;
+
+  public String getNumeroCbf() {
+    return numeroCbf;
+  }
+
+  public void setNumeroCbf(String numeroCbf) {
+    this.numeroCbf = numeroCbf;
+  }
 
   public Long getId() {
     return id;
@@ -34,19 +43,19 @@ public class Documento {
     this.id = id;
   }
 
-  public int getCpf() {
+  public String getCpf() {
     return cpf;
   }
 
-  public void setCpf(int cpf) {
+  public void setCpf(String cpf) {
     this.cpf = cpf;
   }
 
-  public int getNumeroCarteiraTrabalho() {
+  public String getNumeroCarteiraTrabalho() {
     return numeroCarteiraTrabalho;
   }
 
-  public void setNumeroCarteiraTrabalho(int numeroCarteiraTrabalho) {
+  public void setNumeroCarteiraTrabalho(String numeroCarteiraTrabalho) {
     this.numeroCarteiraTrabalho = numeroCarteiraTrabalho;
   }
 

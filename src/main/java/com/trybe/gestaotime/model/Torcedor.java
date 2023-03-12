@@ -19,7 +19,7 @@ public class Torcedor {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
-  private String name;
+  private String nome;
 
   @ManyToMany(mappedBy = "torcedores")
   private List<Time> times;
@@ -35,12 +35,12 @@ public class Torcedor {
     this.id = id;
   }
   
-  public String getName() {
-    return name;
+  public String getNome() {
+    return nome;
   }
   
-  public void setName(String name) {
-    this.name = name;
+  public void setNome(String nome) {
+    this.nome = nome;
   }
   
   public List<Time> getTimes() {
