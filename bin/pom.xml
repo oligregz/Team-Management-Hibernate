@@ -118,8 +118,8 @@
 
 	</dependencies>
 	<build>
-
-		<plugins>
+      <pluginManagement>
+		  <plugins>
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -206,6 +206,7 @@
 
 		</plugins>
 
+	  </pluginManagement>
 	</build>
 
 </project>
