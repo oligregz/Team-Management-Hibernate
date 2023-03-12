@@ -14,7 +14,7 @@ import javax.persistence.criteria.Root;
 public class JogadorDao extends GenericDao<Jogador, Integer> {
 
   @Override
-  void save(Jogador s) {
+  public void salvar(Jogador s) {
     EntityManager em = GenericDao.emf.createEntityManager();
     em.getTransaction().begin();
     em.persist(s);
@@ -23,7 +23,7 @@ public class JogadorDao extends GenericDao<Jogador, Integer> {
   }
 
   @Override
-  Jogador findById(Integer id) {
+  public Jogador findById(Integer id) {
     EntityManager em = GenericDao.emf.createEntityManager();
     em.getTransaction().begin();
     Jogador player = em.find(Jogador.class, id);
@@ -34,7 +34,7 @@ public class JogadorDao extends GenericDao<Jogador, Integer> {
   }
 
   @Override
-  List<Jogador> list() {
+  public List<Jogador> listar() {
     EntityManager em = GenericDao.emf.createEntityManager();
     
     CriteriaBuilder cb = em.getCriteriaBuilder();
@@ -46,7 +46,7 @@ public class JogadorDao extends GenericDao<Jogador, Integer> {
   }
 
   @Override
-  void update(Jogador s) {
+  public void update(Jogador s) {
     EntityManager em = GenericDao.emf.createEntityManager();
     em.getTransaction().begin();
     em.merge(s);
@@ -55,7 +55,7 @@ public class JogadorDao extends GenericDao<Jogador, Integer> {
   }
 
   @Override
-  void delete(Integer id) {
+  public void deletar(Long id) {
     EntityManager em = GenericDao.emf.createEntityManager();
     em.getTransaction().begin();
     Jogador document = em.find(Jogador.class, id);

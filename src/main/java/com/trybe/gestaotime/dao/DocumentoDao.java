@@ -14,7 +14,7 @@ import javax.persistence.criteria.Root;
 public class DocumentoDao extends GenericDao<Documento, Integer> {
 
   @Override
-  void save(Documento s) {
+  public void salvar(Documento s) {
     EntityManager em = GenericDao.emf.createEntityManager();
     em.getTransaction().begin();
     em.persist(s);
@@ -23,7 +23,7 @@ public class DocumentoDao extends GenericDao<Documento, Integer> {
   }
 
   @Override
-  Documento findById(Integer id) {
+  public Documento findById(Integer id) {
     EntityManager em = GenericDao.emf.createEntityManager();
     em.getTransaction().begin();
     Documento document = em.find(Documento.class, id);
@@ -34,7 +34,7 @@ public class DocumentoDao extends GenericDao<Documento, Integer> {
   }
 
   @Override
-  List<Documento> list() {
+  public List<Documento> listar() {
     EntityManager em = GenericDao.emf.createEntityManager();
     
     CriteriaBuilder cb = em.getCriteriaBuilder();
@@ -46,7 +46,7 @@ public class DocumentoDao extends GenericDao<Documento, Integer> {
   }
 
   @Override
-  void update(Documento s) {
+  public void update(Documento s) {
     EntityManager em = GenericDao.emf.createEntityManager();
     em.getTransaction().begin();
     em.merge(s);
@@ -55,7 +55,7 @@ public class DocumentoDao extends GenericDao<Documento, Integer> {
   }
 
   @Override
-  void delete(Integer id) {
+  public void deletar(Long id) {
     EntityManager em = GenericDao.emf.createEntityManager();
     em.getTransaction().begin();
     Documento document = em.find(Documento.class, id);

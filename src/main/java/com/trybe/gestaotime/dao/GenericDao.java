@@ -13,13 +13,13 @@ public abstract class GenericDao<T, I extends Serializable> {
 
   static EntityManagerFactory emf = Persistence.createEntityManagerFactory("crudHibernatePU");
   
-  abstract void save(T s);
+  abstract void salvar(T s);
 
   abstract void update(T s);
 
-  abstract void delete(I id);
+  abstract void deletar(Long id);
 
-  abstract List<T> list();
+  abstract List<T> listar();
 
   abstract T findById(I id);
 }

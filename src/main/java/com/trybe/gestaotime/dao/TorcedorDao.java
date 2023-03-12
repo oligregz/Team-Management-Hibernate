@@ -14,7 +14,7 @@ import javax.persistence.criteria.Root;
 public class TorcedorDao extends GenericDao<Torcedor, Integer> {
 
   @Override
-  void save(Torcedor s) {
+  public void salvar(Torcedor s) {
     EntityManager em = GenericDao.emf.createEntityManager();
     em.getTransaction().begin();
     em.persist(s);
@@ -23,7 +23,7 @@ public class TorcedorDao extends GenericDao<Torcedor, Integer> {
   }
 
   @Override
-  Torcedor findById(Integer id) {
+  public Torcedor findById(Integer id) {
     EntityManager em = GenericDao.emf.createEntityManager();
     em.getTransaction().begin();
     Torcedor document = em.find(Torcedor.class, id);
@@ -34,7 +34,7 @@ public class TorcedorDao extends GenericDao<Torcedor, Integer> {
   }
 
   @Override
-  List<Torcedor> list() {
+  public List<Torcedor> listar() {
     EntityManager em = GenericDao.emf.createEntityManager();
     
     CriteriaBuilder cb = em.getCriteriaBuilder();
@@ -46,7 +46,7 @@ public class TorcedorDao extends GenericDao<Torcedor, Integer> {
   }
 
   @Override
-  void update(Torcedor s) {
+  public void update(Torcedor s) {
     EntityManager em = GenericDao.emf.createEntityManager();
     em.getTransaction().begin();
     em.merge(s);
@@ -55,7 +55,7 @@ public class TorcedorDao extends GenericDao<Torcedor, Integer> {
   }
 
   @Override
-  void delete(Integer id) {
+  public void deletar(Long id) {
     EntityManager em = GenericDao.emf.createEntityManager();
     em.getTransaction().begin();
     Torcedor document = em.find(Torcedor.class, id);

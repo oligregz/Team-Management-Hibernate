@@ -13,7 +13,7 @@ import javax.persistence.criteria.Root;
 public class TimeDao extends GenericDao<Time, Integer> {
 
   @Override
-  void save(Time s) {
+  public void salvar(Time s) {
     EntityManager em = GenericDao.emf.createEntityManager();
     em.getTransaction().begin();
     em.persist(s);
@@ -22,7 +22,7 @@ public class TimeDao extends GenericDao<Time, Integer> {
   }
 
   @Override
-  Time findById(Integer id) {
+  public Time findById(Integer id) {
     EntityManager em = GenericDao.emf.createEntityManager();
     em.getTransaction().begin();
     Time team = em.find(Time.class, id);
@@ -33,7 +33,7 @@ public class TimeDao extends GenericDao<Time, Integer> {
   }
 
   @Override
-  List<Time> list() {
+  public List<Time> listar() {
     EntityManager em = GenericDao.emf.createEntityManager();
     
     CriteriaBuilder cb = em.getCriteriaBuilder();
@@ -45,7 +45,7 @@ public class TimeDao extends GenericDao<Time, Integer> {
   }
 
   @Override
-  void update(Time s) {
+  public void update(Time s) {
     EntityManager em = GenericDao.emf.createEntityManager();
     em.getTransaction().begin();
     em.merge(s);
@@ -54,7 +54,7 @@ public class TimeDao extends GenericDao<Time, Integer> {
   }
 
   @Override
-  void delete(Integer id) {
+  public void deletar(Long id) {
     EntityManager em = GenericDao.emf.createEntityManager();
     em.getTransaction().begin();
     Time team = em.find(Time.class, id);
