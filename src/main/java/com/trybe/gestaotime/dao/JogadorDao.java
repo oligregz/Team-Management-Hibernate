@@ -1,5 +1,7 @@
 package com.trybe.gestaotime.dao;
 
+import com.trybe.gestaotime.model.Jogador;
+
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -8,7 +10,6 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
-import com.trybe.gestaotime.model.Jogador;
 
 public class JogadorDao extends GenericDao<Jogador, Integer> {
 

@@ -35,6 +35,9 @@ public class Time {
       inverseJoinColumns = {@JoinColumn(name = "torcedor_id")})
   private List<Torcedor> torcedores;
 
+  /**
+   * Constructor.
+   */
   public Time() {
     super();
     this.jogadores = new ArrayList<Jogador>();
