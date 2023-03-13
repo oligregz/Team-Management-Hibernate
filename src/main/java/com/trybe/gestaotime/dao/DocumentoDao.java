@@ -1,12 +1,13 @@
 package com.trybe.gestaotime.dao;
 
+import com.trybe.gestaotime.model.Documento;
+
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
-import com.trybe.gestaotime.model.Documento;
 
 
 public class DocumentoDao extends GenericDao<Documento, Integer> {
