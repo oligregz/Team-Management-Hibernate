@@ -28,7 +28,7 @@ public class Time {
   private List<Jogador> jogadores;
 
   @ManyToMany
-  @JoinTable(name = "relacionamento_time_torcedor",
+  @JoinTable(name = "time_torcedor",
       joinColumns = {@JoinColumn(name = "time_id") },
       inverseJoinColumns = {@JoinColumn(name = "torcedor_id")})
   private List<Torcedor> torcedores;

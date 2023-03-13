@@ -23,13 +23,17 @@ public class Jogador {
   
   private String posicao;
 
+  @OneToOne
+  @JoinColumn(name = "documento_id")
+  private Documento documento;
+
   @ManyToOne
   @JoinColumn(name = "time_id")
   private Time time;
 
-  @OneToOne
-  @JoinColumn(name = "documento_id")
-  private Documento documento;
+  public Integer getId() {
+    return id;
+  }
 
   public String getNome() {
     return nome;
@@ -61,10 +65,6 @@ public class Jogador {
 
   public void setTime(Time time) {
     this.time = time;
-  }
-
-  public Integer getId() {
-    return id;
   }
 
 }
