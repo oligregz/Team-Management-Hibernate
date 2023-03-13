@@ -54,7 +54,7 @@ public class TimeDao extends GenericDao<Time, Integer> {
   }
 
   @Override
-  public void deletar(Long id) {
+  public void deletar(Integer id) {
     EntityManager em = GenericDao.emf.createEntityManager();
     em.getTransaction().begin();
     Time team = em.find(Time.class, id);

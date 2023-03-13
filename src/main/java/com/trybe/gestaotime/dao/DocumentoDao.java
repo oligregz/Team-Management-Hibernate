@@ -1,14 +1,12 @@
 package com.trybe.gestaotime.dao;
 
-import com.trybe.gestaotime.model.Documento;
-
 import java.util.List;
-
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
+import com.trybe.gestaotime.model.Documento;
 
 
 public class DocumentoDao extends GenericDao<Documento, Integer> {
@@ -55,7 +53,7 @@ public class DocumentoDao extends GenericDao<Documento, Integer> {
   }
 
   @Override
-  public void deletar(Long id) {
+  public void deletar(Integer id) {
     EntityManager em = GenericDao.emf.createEntityManager();
     em.getTransaction().begin();
     Documento document = em.find(Documento.class, id);

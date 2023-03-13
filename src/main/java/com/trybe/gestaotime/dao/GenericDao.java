@@ -17,7 +17,7 @@ public abstract class GenericDao<T, I extends Serializable> {
 
   abstract void editar(T s);
 
-  abstract void deletar(Long id);
+  abstract void deletar(Integer id);
 
   abstract List<T> listar();
 

@@ -17,7 +17,7 @@ public class Torcedor {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long id;
+  private Integer id;
 
   private String nome;
 
@@ -27,12 +27,8 @@ public class Torcedor {
   public Torcedor() {
   }
   
-  public Long getId() {
+  public Integer getId() {
     return id;
-  }
-  
-  public void setId(Long id) {
-    this.id = id;
   }
   
   public String getNome() {

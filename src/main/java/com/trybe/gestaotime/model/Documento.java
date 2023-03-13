@@ -1,7 +1,6 @@
 package com.trybe.gestaotime.model;
 
 import javax.persistence.CascadeType;
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -18,13 +17,12 @@ import javax.persistence.Table;
 public class Documento {
   @Id
   @GeneratedValue(strategy =  GenerationType.IDENTITY)
-  private Long id;
+  private Integer id;
 
   @OneToOne(mappedBy = "documento", cascade = CascadeType.ALL, orphanRemoval = true,
       fetch = FetchType.LAZY)
   private Jogador jogador;
 
-  @Column(nullable = false)
   private String cpf;
 
   private String numeroCarteiraTrabalho;
@@ -38,12 +36,8 @@ public class Documento {
     this.numeroCbf = numeroCbf;
   }
 
-  public Long getId() {
+  public Integer getId() {
     return id;
-  }
-
-  public void setId(Long id) {
-    this.id = id;
   }
 
   public String getCpf() {

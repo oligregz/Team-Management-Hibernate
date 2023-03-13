@@ -1,8 +1,6 @@
 package com.trybe.gestaotime.model;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -19,19 +17,18 @@ import javax.persistence.Table;
 public class Jogador {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long id;
+  private Integer id;
 
   private String nome;
   
-  @Column(nullable = false)
   private String posicao;
 
   @ManyToOne
   @JoinColumn(name = "time_id")
   private Time time;
 
+  @OneToOne
   @JoinColumn(name = "documento_id")
-  @OneToOne(fetch = FetchType.LAZY)
   private Documento documento;
 
   public String getNome() {
@@ -66,7 +63,7 @@ public class Jogador {
     this.time = time;
   }
 
-  public Long getId() {
+  public Integer getId() {
     return id;
   }
 
