@@ -1,5 +1,6 @@
 package com.trybe.gestaotime.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -21,6 +22,8 @@ public class Jogador {
   private Long id;
 
   private String nome;
+  
+  @Column(nullable = false)
   private String posicao;
 
   @ManyToOne

@@ -1,6 +1,7 @@
 package com.trybe.gestaotime.model;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -23,7 +24,9 @@ public class Documento {
       fetch = FetchType.LAZY)
   private Jogador jogador;
 
+  @Column(nullable = false)
   private String cpf;
+
   private String numeroCarteiraTrabalho;
   private String numeroCbf;
 
