@@ -8,6 +8,7 @@ import com.trybe.gestaotime.dao.TimeDao;
 import com.trybe.gestaotime.model.Documento;
 import com.trybe.gestaotime.model.Jogador;
 import com.trybe.gestaotime.model.Time;
+
 import java.util.List;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -83,7 +84,6 @@ public class JogadorDaoTest {
     }
 
     List<Jogador> resultado = this.jogadorDao.listar();
-
     assertEquals(5, resultado.size());
 
     for (int i = 0; i < 5; i++) {
@@ -165,7 +165,6 @@ public class JogadorDaoTest {
     jogador.setPosicao(posicao);
     jogador.setTime(time);
     jogador.setDocumento(documento);
-
     return jogador;
   }
 

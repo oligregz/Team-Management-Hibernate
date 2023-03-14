@@ -18,6 +18,7 @@ public class JogadorDao extends GenericDao<Jogador, Integer> {
     EntityManager em = GenericDao.emf.createEntityManager();
     em.getTransaction().begin();
     em.persist(s);
+    System.out.println(s);
     em.getTransaction().commit();
     em.close();
   }
@@ -42,6 +43,7 @@ public class JogadorDao extends GenericDao<Jogador, Integer> {
     Root<Jogador> rootEntry = cq.from(Jogador.class);
     CriteriaQuery<Jogador> all = cq.select(rootEntry);
     TypedQuery<Jogador> allQuery = em.createQuery(all);
+    System.out.println("res: " + allQuery.getResultList().size());
     return allQuery.getResultList();
   }
 
