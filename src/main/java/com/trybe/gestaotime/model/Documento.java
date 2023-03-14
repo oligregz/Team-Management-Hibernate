@@ -1,6 +1,5 @@
 package com.trybe.gestaotime.model;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,7 +16,6 @@ public class Documento {
   @GeneratedValue(strategy =  GenerationType.IDENTITY)
   private Integer id;
 
-  @Column(nullable = false)
   private String cpf;
 
   private String numeroCarteiraTrabalho;

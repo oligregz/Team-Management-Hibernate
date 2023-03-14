@@ -84,6 +84,7 @@ public class JogadorDaoTest {
     }
 
     List<Jogador> resultado = this.jogadorDao.listar();
+    System.out.println("resultado: " + resultado);
     assertEquals(5, resultado.size());
 
     for (int i = 0; i < 5; i++) {
