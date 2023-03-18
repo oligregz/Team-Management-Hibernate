@@ -1,6 +1,8 @@
 package com.trybe.gestaotime.model;
 
 import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -24,7 +26,7 @@ public class Time {
 
   private String nome;
 
-  @OneToMany
+  @OneToMany(mappedBy = "time", cascade = CascadeType.ALL, orphanRemoval = true)
   private List<Jogador> jogadores;
 
   @ManyToMany
