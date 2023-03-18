@@ -1,5 +1,0 @@
-ignore_files:
-  - pom.xml
-  - src/test/
-  - mvnw
-  - .mvn/
