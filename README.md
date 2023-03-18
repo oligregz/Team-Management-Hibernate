@@ -1,10 +1,17 @@
-# :construction: README em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto.
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+#  Team Managemet API
+
+<summary><strong>🤷 About the API</strong></summary><br />
+
+- This is a Rest API for managing teams, players, fans and documents developed in JAVA and Hibernate.
+
+- This application was developed during the "JAVA Acceleration program (by Trybe ft. Hub Floripa)"for students or graduates at Trybe.
+
+- The API was developed oriented to tests (implemented by Trybe) as a form of evaluation.
+
+<br /><summary><strong>Table Relationship Schema</strong></summary><br />
+
+![alt text](./img/der.png)<br />
+
+<br /><summary><strong>Compliance with Approval Requirements</strong></summary><br />
+
+![alt text](./img/aprove-team-management.png)<br />
