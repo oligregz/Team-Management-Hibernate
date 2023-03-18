@@ -29,7 +29,7 @@ public class Time {
   @OneToMany(mappedBy = "time", cascade = CascadeType.ALL, orphanRemoval = true)
   private List<Jogador> jogadores;
 
-  @ManyToMany
+  @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
   @JoinTable(name = "time_torcedor",
       joinColumns = {@JoinColumn(name = "time_id") },
       inverseJoinColumns = {@JoinColumn(name = "torcedor_id")})
